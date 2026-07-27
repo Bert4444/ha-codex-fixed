@@ -15,6 +15,8 @@ RUN apk add --no-cache \
       ca-certificates \
       curl \
       git \
+      grep \
+      gzip \
       jq \
       ripgrep \
       tmux \

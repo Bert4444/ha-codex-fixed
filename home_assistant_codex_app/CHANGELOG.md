@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.14
+
+- Fixed the visible terminal scrollbar build path by including the standard text and compression utilities it requires.
+
 ## 0.1.13
 
 - Added all currently documented Codex CLI models to the Configuration selector.
