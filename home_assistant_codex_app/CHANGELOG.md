@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.15
+
+- Added an inset terminal-history gutter that never covers terminal text or the status row.
+- Added draggable history, Top/End buttons, mouse-wheel and trackpad scrolling, and touch-swipe scrolling.
+
 ## 0.1.14
 
 - Fixed the visible terminal scrollbar build path by including the standard text and compression utilities it requires.
