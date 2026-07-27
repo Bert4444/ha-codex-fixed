@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.18
+
+- Put model selection first in the Home Assistant Apps description and setup guidance, directing users to App Configuration before starting HA Codex.
+
 ## 0.1.17
 
 - Removed the current-browser sign-in path from setup instructions.
