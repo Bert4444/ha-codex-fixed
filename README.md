@@ -80,6 +80,14 @@ routine Home Assistant reviews, configuration edits, and dashboard work. Use
 the add-on's **Configuration** tab to select **GPT-5.6 Sol** only for an
 unusually difficult or broad task, then restart the add-on.
 
+## Long reviews and scrolling
+
+HA Codex retains **20,000 lines** of terminal history by default. This prevents
+a detailed review from falling out of the visible terminal buffer. You can set
+**Terminal scrollback** to any value between 1,000 and 50,000 in the add-on's
+**Configuration** tab, then restart the add-on. Scroll with the pointer over
+the terminal; on a touch device, swipe inside the terminal output.
+
 ## Safe first prompts
 
 Start in review mode:

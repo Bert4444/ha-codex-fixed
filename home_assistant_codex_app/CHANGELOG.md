@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.9
+
+- Increased the terminal history buffer to 20,000 lines so long Codex reviews remain scrollable.
+- Added a configurable Terminal scrollback setting (1,000–50,000 lines).
+
 ## 0.1.8
 
 - Updated the repository URL to `ambient-home-systems/ha-codex` after the repository rename.

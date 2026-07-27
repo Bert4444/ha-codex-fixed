@@ -11,6 +11,7 @@ mkdir -p "${CODEX_DATA_DIR}"
 export CODEX_HOME="${CODEX_DATA_DIR}"
 
 FONT_SIZE="$(bashio::config 'terminal_font_size')"
+SCROLLBACK="$(bashio::config 'terminal_scrollback')"
 THEME="$(bashio::config 'terminal_theme')"
 PERSIST="$(bashio::config 'session_persistence')"
 MODEL="$(bashio::config 'model')"
@@ -31,5 +32,6 @@ exec /usr/local/bin/ttyd \
   --port 7681 \
   --terminal-type xterm-256color \
   --client-option "fontSize=${FONT_SIZE}" \
+  --client-option "scrollback=${SCROLLBACK}" \
   --client-option "theme=${THEME}" \
   bash -lc "${COMMAND}"
