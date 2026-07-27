@@ -71,10 +71,10 @@ Codex.
 | --- | --- | --- |
 | **Model** | GPT-5.6 Terra | Starts new Codex sessions with Terra. Use Sol only for unusually difficult or broad work. |
 | **Terminal font size** | 14 | Sets terminal text size (10–24). |
-| **Terminal scrollback** | 10,000 lines | Keeps 1,000–50,000 lines of past terminal output in both the browser and persistent terminal session, including output produced immediately after startup. |
+| **Terminal scrollback** | 5,000 lines | Keeps 1,000–50,000 lines of past terminal output in both the browser and persistent terminal session, including output produced immediately after startup. |
 | **Terminal theme** | Dark | Sets the terminal color theme. |
-| **Session persistence** | On | Keeps the terminal session alive while the add-on is active when you leave the sidebar. |
-| **Preserve terminal history** | On | Runs Codex in inline transcript mode without an intermediate fullscreen terminal layer so browser scrollback works for long reviews. Recommended. |
+| **Session persistence** | On | Keeps the active Codex session running when you leave HA Codex for another Home Assistant page, then reconnects it when you return. |
+| **Preserve terminal history** | On | Keeps the visible browser scrollbar and long inline transcript while the active session persists in the background. Recommended. |
 | **Allow Home Assistant control actions** | Off | Enables HA Codex's restricted configuration check and reload helper. |
 | **Allow Home Assistant Core restart** | Off | Allows the helper to restart Core after a successful configuration check. Requires control actions to be enabled. |
 
@@ -82,7 +82,7 @@ For long reviews, leave **Preserve terminal history** on. A visible gold
 scrollbar at the right edge shows your position in the history: drag its thumb,
 use a mouse wheel or trackpad, or swipe inside the terminal on a touch device.
 The scrollbar navigates the full configured history buffer.
-Raise **Terminal scrollback** only if 10,000 lines is not enough.
+Raise **Terminal scrollback** only if 5,000 lines is not enough.
 
 ### Home Assistant control actions
 

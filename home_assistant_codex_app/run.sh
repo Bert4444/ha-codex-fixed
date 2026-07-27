@@ -31,8 +31,12 @@ readonly AUTH_FLOW_VERSION="device-code-v2"
 readonly SESSION_NAME="home-assistant-codex-${MODEL}-${TERMINAL_MODE}-${AUTH_FLOW_VERSION}"
 TTYD_INDEX_ARGS=()
 
-if [ "${PERSIST}" = "true" ] && [ "${TERMINAL_MODE}" = "fullscreen" ]; then
-  COMMAND="tmux set-option -g history-limit ${SCROLLBACK}; tmux set-option -g mouse on; tmux new-session -A -s ${SESSION_NAME} '/usr/local/bin/ha-codex-session ${MODEL} ${TERMINAL_MODE}; exec bash -l'"
+if [ "${PERSIST}" = "true" ]; then
+  # tmux keeps Codex alive when Home Assistant closes the Ingress websocket
+  # during sidebar navigation. Disable tmux's outer alternate screen and mouse
+  # capture so xterm retains the normal, visible browser scrollbar and wheel
+  # scrolling while the detached tmux session holds the running Codex process.
+  COMMAND="tmux set-option -g history-limit ${SCROLLBACK}; tmux set-option -g mouse off; tmux set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'; tmux new-session -A -s ${SESSION_NAME} '/usr/local/bin/ha-codex-session ${MODEL} ${TERMINAL_MODE}; exec bash -l'"
 else
   COMMAND="exec /usr/local/bin/ha-codex-session ${MODEL} ${TERMINAL_MODE}"
 fi

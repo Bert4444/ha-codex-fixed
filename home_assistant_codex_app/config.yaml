@@ -1,6 +1,6 @@
 name: HA Codex
 description: Before starting, select the Codex model in App Configuration. To let Codex validate, reload, or restart Home Assistant, enable "Allow Home Assistant control actions" (and separately "Allow Home Assistant Core restart"), then restart this add-on.
-version: "0.1.27"
+version: "0.1.28"
 slug: home_assistant_codex_app
 url: https://github.com/ambient-home-systems/ha-codex
 arch:
@@ -24,7 +24,7 @@ map:
 options:
   model: gpt-5.6-terra
   terminal_font_size: 14
-  terminal_scrollback: 10000
+  terminal_scrollback: 5000
   terminal_theme: dark
   session_persistence: true
   preserve_terminal_history: true

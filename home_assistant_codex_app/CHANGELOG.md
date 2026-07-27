@@ -2,6 +2,12 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.28
+
+- Made session persistence work with the default inline-history mode, so Codex stays running when you leave the HA Codex sidebar and reattaches when you return.
+- Preserved the browser's visible scrollbar and mouse-wheel behavior while using the persistent terminal session.
+- Reduced the default terminal scrollback from 10,000 to 5,000 lines; both session persistence and history preservation remain enabled by default.
+
 ## 0.1.27
 
 - Promoted Home Assistant control setup to a prominent notice at the top of both README files and the Home Assistant add-on description.

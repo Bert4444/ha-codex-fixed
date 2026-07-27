@@ -116,10 +116,10 @@ want before starting HA Codex. Restart the add-on after changing a setting.
 | --- | --- | --- |
 | **Model** | GPT-5.6 Terra | The starting model for new Codex sessions. Use Sol only for unusually difficult or broad work. |
 | **Terminal font size** | 14 | Changes the terminal text size (10–24). |
-| **Terminal scrollback** | 10,000 lines | Sets how much past terminal output is retained (1,000–50,000 lines) in both the browser and persistent terminal session, including output produced immediately after startup. 10,000 is a practical balance. |
+| **Terminal scrollback** | 5,000 lines | Sets how much past terminal output is retained (1,000–50,000 lines) in both the browser and persistent terminal session, including output produced immediately after startup. 5,000 is a practical balance. |
 | **Terminal theme** | Dark | Selects the terminal color theme. |
-| **Session persistence** | On | Keeps the Codex terminal session running while the add-on is active when you leave and return to the sidebar. |
-| **Preserve terminal history** | On | Starts Codex in inline transcript mode without an intermediate fullscreen terminal layer, allowing xterm scrollback to work for long reviews. This is recommended. |
+| **Session persistence** | On | Keeps the active Codex session running while you navigate to another Home Assistant page, then reattaches it when you return to the HA Codex sidebar. |
+| **Preserve terminal history** | On | Retains the browser's visible scrollbar and long inline transcript while the persistent session runs in the background. This is recommended. |
 | **Allow Home Assistant control actions** | Off | Lets Codex validate configuration and request only the supported reload actions through HA Codex's restricted helper. |
 | **Allow Home Assistant Core restart** | Off | Lets the helper restart Core only after a successful configuration check. Requires Home Assistant control actions to be enabled. |
 
@@ -151,7 +151,7 @@ terminal transcript so the browser can scroll through it. A visible gold
 scrollbar at the right edge shows your position in the history: drag its thumb,
 scroll with a mouse wheel or trackpad, or swipe inside the terminal on a touch
 device. The scrollbar navigates the full configured history buffer. Increase **Terminal
-scrollback** to 20,000 only if 10,000 lines is genuinely not enough.
+scrollback** only if 5,000 lines is genuinely not enough.
 
 ## Safe first prompts
 
