@@ -5,8 +5,7 @@ ARG TTYD_VERSION
 
 ENV LANG=C.UTF-8 \
     LC_ALL=C.UTF-8 \
-    TERM=xterm-256color \
-    PATH=/root/.local/bin:${PATH}
+    TERM=xterm-256color
 
 # Codex itself is installed with OpenAI's Linux installer. ttyd provides the
 # terminal that Home Assistant exposes through Ingress.
@@ -21,12 +20,12 @@ RUN apk add --no-cache \
   && update-ca-certificates \
   && curl -fsSL "https://github.com/tsl0922/ttyd/releases/download/${TTYD_VERSION}/ttyd.x86_64" -o /usr/local/bin/ttyd \
   && chmod 0755 /usr/local/bin/ttyd \
-  && curl -fsSL https://chatgpt.com/codex/install.sh | sh \
+  && curl -fsSL https://chatgpt.com/codex/install.sh | CODEX_HOME=/opt/codex CODEX_INSTALL_DIR=/usr/local/bin CODEX_NON_INTERACTIVE=1 sh \
   && codex --version
 
 COPY run.sh /run.sh
 RUN chmod 0755 /run.sh \
-  && mkdir -p /homeassistant /config/codex
+  && mkdir -p /homeassistant /config/codex /opt/codex
 
 WORKDIR /homeassistant
 
