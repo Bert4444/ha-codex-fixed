@@ -9,7 +9,13 @@ packages, and custom components.
 > HA Codex can modify your Home Assistant configuration. Make a Home Assistant
 > backup and review every proposed diff before approving a change.
 
-![Illustrated HA Codex workspace](assets/ha-codex-workspace.svg)
+## HA Codex in use
+
+This real, privacy-safe workspace capture shows Codex reading a Home Assistant
+configuration file. It also shows the optional MCP warning discussed below;
+normal file access and Codex operation continue as expected.
+
+![HA Codex reading a Home Assistant configuration](assets/screenshots/ha-codex-workspace.png)
 
 ## What it is — and is not
 
@@ -29,7 +35,7 @@ access, or Home Assistant Supervisor token.
 3. Add this repository URL:
 
    ```text
-   https://github.com/ambient-home-systems/home-assistant-codex-app
+   https://github.com/ambient-home-systems/ha-codex
    ```
 
 4. Find **HA Codex**, select **Install**, then **Start** it.
@@ -56,7 +62,9 @@ to your ChatGPT account, enter the code if asked, and return to HA Codex.
 This is the preferred option because it avoids browser or pop-up limitations in
 Home Assistant’s embedded add-on page. The code is temporary; never share it.
 
-![Illustrated device-login flow](assets/ha-codex-device-login.svg)
+> [!NOTE]
+> Device codes are deliberately not shown in public screenshots. Treat the
+> temporary URL and code as sign-in credentials and keep them private.
 
 ### 3. OpenAI API key (only if your Codex sign-in screen offers it)
 
@@ -115,7 +123,7 @@ Every release has three matching records:
 
 - The add-on version in `home_assistant_codex_app/config.yaml`.
 - User-facing Home Assistant update notes in `home_assistant_codex_app/CHANGELOG.md`.
-- A tagged [GitHub Release](https://github.com/ambient-home-systems/home-assistant-codex-app/releases).
+- A tagged [GitHub Release](https://github.com/ambient-home-systems/ha-codex/releases).
 
 Use the Add-on Store to install updates. Open the update details before
 installing to read the changelog.

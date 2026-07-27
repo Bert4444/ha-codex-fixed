@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.8
+
+- Updated the repository URL to `ambient-home-systems/ha-codex` after the repository rename.
+- Replaced the illustrated README images with a privacy-safe, real HA Codex workspace screenshot.
+
 ## 0.1.7
 
 - Changed the default Codex model to GPT-5.6 Terra to better balance everyday Home Assistant work and usage.

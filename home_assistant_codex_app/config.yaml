@@ -1,8 +1,8 @@
 name: HA Codex
 description: Use Codex in a Home Assistant sidebar workspace to review and edit your configuration.
-version: "0.1.7"
+version: "0.1.8"
 slug: home_assistant_codex_app
-url: https://github.com/ambient-home-systems/home-assistant-codex-app
+url: https://github.com/ambient-home-systems/ha-codex
 arch:
   - amd64
 startup: application
