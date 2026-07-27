@@ -21,8 +21,8 @@ access, or a Supervisor token.
 
 ## First sign-in
 
-Open the sidebar item. Codex starts automatically. On first use, select
-**Sign in with ChatGPT**.
+Open the sidebar item. Codex starts automatically. On first use, HA Codex
+shows a two-option sign-in menu.
 
 1. **Log in with a different device (Preferred Method):** complete the secure,
    one-time code sign-in from a phone, tablet, or another computer, then return

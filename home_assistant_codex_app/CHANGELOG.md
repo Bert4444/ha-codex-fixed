@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.19
+
+- Replaced Codex's three-choice first-run login screen with an HA Codex sign-in menu.
+- Made **Sign in with Device Code (Preferred Method)** option 1 and kept API-key sign-in as option 2.
+
 ## 0.1.18
 
 - Put model selection first in the Home Assistant Apps description and setup guidance, directing users to App Configuration before starting HA Codex.

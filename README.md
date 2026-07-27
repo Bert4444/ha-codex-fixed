@@ -43,9 +43,9 @@ access, or Home Assistant Supervisor token.
 
 ## First-time sign-in
 
-On its first launch, Codex will ask you to sign in. Select **Sign in with
-ChatGPT** and use a ChatGPT account that has access to Codex. ChatGPT
-subscription access and OpenAI API billing are separate.
+On its first launch, HA Codex shows a two-option sign-in menu. Use a ChatGPT
+account that has access to Codex for device-code sign-in; ChatGPT subscription
+access and OpenAI API billing are separate.
 
 ### 1. Log in with a different device (Preferred Method)
 
