@@ -24,11 +24,14 @@ access, or a Supervisor token.
 Open the sidebar item. Codex starts automatically. On first use, select
 **Sign in with ChatGPT**.
 
-> [!IMPORTANT]
-> **Recommended:** choose **Log in with a different device**. Complete the
-> secure, one-time code sign-in from a phone, tablet, or another computer, then
-> return to HA Codex. This avoids browser and pop-up limits in the embedded
-> Home Assistant page.
+1. **Log in with a different device (Preferred Method):** complete the secure,
+   one-time code sign-in from a phone, tablet, or another computer, then return
+   to HA Codex. This avoids browser and pop-up limits in the embedded Home
+   Assistant page.
+2. **OpenAI API key** (only if the Codex sign-in screen offers it): this uses a
+   separate, usage-billed OpenAI Platform account, not a ChatGPT subscription.
+   Keep API keys private and never add one to Home Assistant configuration or
+   repository files.
 
 Your Codex session is stored in the add-on's private configuration folder and
 persists across restarts.
@@ -49,7 +52,9 @@ available to you.
 
 ## Add-on settings
 
-Change these in the add-on's **Configuration** tab, then restart HA Codex.
+Select the model you want in the add-on's **Configuration** tab before
+starting HA Codex. Change any other settings there as needed, then restart HA
+Codex.
 
 | Setting | Default | What it does |
 | --- | --- | --- |
@@ -61,8 +66,9 @@ Change these in the add-on's **Configuration** tab, then restart HA Codex.
 | **Preserve terminal history** | On | Runs Codex in inline transcript mode so browser scrollback works for long reviews. Recommended. |
 
 For long reviews, leave **Preserve terminal history** on. HA Codex reserves a
-right-side history gutter: drag the golden handle, use **Top** or **End**, use
-a mouse wheel or trackpad, or swipe inside the terminal on a touch device.
+slim right-side history gutter: drag the golden handle, use the **up/down
+arrows**, use a mouse wheel or trackpad, or swipe inside the terminal on a touch
+device.
 Raise **Terminal scrollback** only if 10,000 lines is not enough.
 
 ## Safe workflow

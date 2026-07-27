@@ -2,6 +2,12 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.16
+
+- Replaced wordy Top/End controls with compact, accessible up/down arrows.
+- Restored xterm's native wheel, trackpad, and touch history handling so the full configured scrollback range is available.
+- Slimmed the history gutter and removed the duplicate native scrollbar to preserve terminal space in the Home Assistant sidebar.
+
 ## 0.1.15
 
 - Added an inset terminal-history gutter that never covers terminal text or the status row.

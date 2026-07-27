@@ -47,13 +47,7 @@ On its first launch, Codex will ask you to sign in. Select **Sign in with
 ChatGPT** and use a ChatGPT account that has access to Codex. ChatGPT
 subscription access and OpenAI API billing are separate.
 
-### 1. Sign in in the current browser
-
-Choose the browser sign-in option and complete the ChatGPT sign-in page that
-opens. Use this when the browser you are currently using to reach Home
-Assistant is the same one you want to authenticate.
-
-### 2. Log in with a different device
+### 1. Log in with a different device (Preferred Method)
 
 > [!IMPORTANT]
 > **Recommended for most Home Assistant installations**
@@ -71,7 +65,7 @@ Assistant is the same one you want to authenticate.
 > Device codes are deliberately not shown in public screenshots. Treat the
 > temporary URL and code as sign-in credentials and keep them private.
 
-### 3. OpenAI API key (only if your Codex sign-in screen offers it)
+### 2. OpenAI API key (only if your Codex sign-in screen offers it)
 
 An API key is a separate, usage-billed OpenAI Platform account. It does **not**
 use your ChatGPT subscription allowance. Prefer the ChatGPT sign-in options
@@ -103,8 +97,8 @@ which choices will actually run.
 
 ## Add-on settings
 
-Open **HA Codex → Configuration** in Home Assistant, then restart the add-on
-after changing a setting.
+Open **HA Codex → Configuration** in Home Assistant and select the model you
+want before starting HA Codex. Restart the add-on after changing a setting.
 
 | Setting | Default | What it does |
 | --- | --- | --- |
@@ -119,8 +113,8 @@ after changing a setting.
 
 With **Preserve terminal history** on, a long review stays in the normal
 terminal transcript so the browser can scroll through it. HA Codex reserves a
-right-side history gutter so controls never cover terminal text: drag its
-golden handle, use **Top** or **End**, scroll with a mouse wheel or trackpad,
+slim right-side history gutter so controls never cover terminal text: drag its
+golden handle, use the **up/down arrows**, scroll with a mouse wheel or trackpad,
 or swipe inside the terminal on a touch device. Increase **Terminal
 scrollback** to 20,000 only if 10,000 lines is genuinely not enough.
 
