@@ -1,4 +1,4 @@
-# Home Assistant Codex App
+# HA Codex
 
 Use OpenAI Codex in a Home Assistant sidebar workspace. The add-on starts a
 persistent web terminal in `/homeassistant`, which is your Home Assistant
@@ -17,7 +17,7 @@ access, or a Supervisor token.
 
 1. In Home Assistant, open **Settings → Add-ons → Add-on Store → ⋮ → Repositories**.
 2. Add `https://github.com/ambient-home-systems/home-assistant-codex-app`.
-3. Install **Home Assistant Codex App**, start it, and enable **Show in sidebar**.
+3. Install **HA Codex**, start it, and enable **Show in sidebar**.
 
 ## First sign-in
 
