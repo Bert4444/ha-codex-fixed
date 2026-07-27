@@ -4,6 +4,15 @@ Use OpenAI Codex in a Home Assistant sidebar workspace. The add-on starts a
 persistent web terminal in `/homeassistant`, which is your Home Assistant
 configuration directory.
 
+> [!IMPORTANT]
+> ## Enable Home Assistant reload and restart actions
+>
+> Open **HA Codex → Configuration**. Turn on **Allow Home Assistant control
+> actions**, then **restart HA Codex**. This enables configuration validation
+> and supported reload actions. To let Codex restart Home Assistant Core, also
+> turn on **Allow Home Assistant Core restart**. Both settings are off by
+> default; no token, IP address, or host setup is required.
+
 ## What it can do
 
 - Review and edit YAML, dashboards, automations, scripts, packages, and custom components.

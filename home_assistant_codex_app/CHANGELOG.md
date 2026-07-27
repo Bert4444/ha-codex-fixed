@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.27
+
+- Promoted Home Assistant control setup to a prominent notice at the top of both README files and the Home Assistant add-on description.
+
 ## 0.1.26
 
 - Added opt-in, built-in Home Assistant control actions with no user-managed token, IP address, or host setup.

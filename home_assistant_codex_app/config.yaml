@@ -1,6 +1,6 @@
 name: HA Codex
-description: Before starting, select the Codex model you want in App Configuration. Optionally enable controlled Home Assistant reload and restart actions. Use Codex in a Home Assistant sidebar workspace to review and edit your configuration.
-version: "0.1.26"
+description: Before starting, select the Codex model in App Configuration. To let Codex validate, reload, or restart Home Assistant, enable "Allow Home Assistant control actions" (and separately "Allow Home Assistant Core restart"), then restart this add-on.
+version: "0.1.27"
 slug: home_assistant_codex_app
 url: https://github.com/ambient-home-systems/ha-codex
 arch:

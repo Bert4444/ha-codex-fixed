@@ -9,6 +9,15 @@ packages, and custom components.
 > HA Codex can modify your Home Assistant configuration. Make a Home Assistant
 > backup and review every proposed diff before approving a change.
 
+> [!IMPORTANT]
+> ## Enable Home Assistant reload and restart actions
+>
+> In **HA Codex → Configuration**, turn on **Allow Home Assistant control
+> actions**, then restart HA Codex. This enables configuration validation and
+> supported reload actions. To let Codex restart Home Assistant Core, separately
+> enable **Allow Home Assistant Core restart**. Both settings are off by
+> default; no token, IP address, or host setup is required.
+
 ## HA Codex in use
 
 This real, privacy-safe workspace capture shows Codex reading a Home Assistant
