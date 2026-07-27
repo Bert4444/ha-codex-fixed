@@ -11,6 +11,7 @@ ENV LANG=C.UTF-8 \
 # terminal that Home Assistant exposes through Ingress.
 RUN apk add --no-cache \
       bash \
+      bubblewrap \
       ca-certificates \
       curl \
       git \
