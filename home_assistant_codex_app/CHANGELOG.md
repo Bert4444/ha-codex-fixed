@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.6
+
+- Added a full repository setup guide with sign-in options, visual examples, safety guidance, and troubleshooting notes.
+
 ## 0.1.5
 
 - Reworked the app icon and logo with a high-contrast badge that is clear in both light and dark Home Assistant themes.
