@@ -2,6 +2,12 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.26
+
+- Added opt-in, built-in Home Assistant control actions with no user-managed token, IP address, or host setup.
+- Added the restricted `ha-codex-ha` helper for configuration validation, selected reload actions, and a validated Home Assistant Core restart.
+- Added separate disabled-by-default controls for Home Assistant actions and Core restart, plus Codex instructions to explain and request approval before using them.
+
 ## 0.1.25
 
 - Added a permanently visible, styled native xterm scrollbar for terminal history.

@@ -3,6 +3,8 @@ set -u
 
 readonly MODEL="$1"
 readonly TERMINAL_MODE="$2"
+readonly HA_CODEX_INSTRUCTIONS='Home Assistant control is available only through the ha-codex-ha helper. For a requested configuration check, reload, or restart, explain the intended action and use ha-codex-ha rather than direct curl, ha, hass, systemctl, Docker, or SUPERVISOR_TOKEN access. Ask for command approval before any reload or restart. Run ha-codex-ha check before a Core restart; the helper enforces this too. Use ha-codex-ha --help to see the allowlisted actions. Dashboard configuration may require a browser refresh; dashboard-resources only reloads Lovelace resources.'
+readonly HA_CODEX_CONFIG_OVERRIDE="developer_instructions=\"${HA_CODEX_INSTRUCTIONS}\""
 
 cd /homeassistant
 
@@ -52,7 +54,7 @@ if ! codex login status >/dev/null 2>&1; then
 fi
 
 if [ "${TERMINAL_MODE}" = "inline" ]; then
-  exec codex --no-alt-screen --model "${MODEL}"
+  exec codex --config "${HA_CODEX_CONFIG_OVERRIDE}" --no-alt-screen --model "${MODEL}"
 fi
 
-exec codex --model "${MODEL}"
+exec codex --config "${HA_CODEX_CONFIG_OVERRIDE}" --model "${MODEL}"

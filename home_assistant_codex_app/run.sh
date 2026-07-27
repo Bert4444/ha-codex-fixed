@@ -17,6 +17,10 @@ THEME="$(bashio::config 'terminal_theme')"
 PERSIST="$(bashio::config 'session_persistence')"
 PRESERVE_HISTORY="$(bashio::config 'preserve_terminal_history')"
 MODEL="$(bashio::config 'model')"
+HOME_ASSISTANT_CONTROL="$(bashio::config 'home_assistant_control')"
+ALLOW_HOME_ASSISTANT_RESTART="$(bashio::config 'allow_home_assistant_restart')"
+export HA_CODEX_HOME_ASSISTANT_CONTROL="${HOME_ASSISTANT_CONTROL}"
+export HA_CODEX_ALLOW_HOME_ASSISTANT_RESTART="${ALLOW_HOME_ASSISTANT_RESTART}"
 TERMINAL_MODE="fullscreen"
 
 if [ "${PRESERVE_HISTORY}" = "true" ]; then
@@ -37,6 +41,7 @@ bashio::log.info "Starting HA Codex."
 bashio::log.info "Using Codex model: ${MODEL}."
 bashio::log.info "Terminal history mode: ${TERMINAL_MODE}."
 bashio::log.info "First-time sign-in uses the HA Codex device-code method by default."
+bashio::log.info "Home Assistant control actions: ${HOME_ASSISTANT_CONTROL}; Core restart: ${ALLOW_HOME_ASSISTANT_RESTART}."
 
 # ttyd bundles its complete browser client inside its executable.  Home
 # Assistant's embedded browser can hide the native xterm scrollbar, especially

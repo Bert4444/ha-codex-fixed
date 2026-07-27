@@ -1,6 +1,6 @@
 name: HA Codex
-description: Before starting, select the Codex model you want in App Configuration. Use Codex in a Home Assistant sidebar workspace to review and edit your configuration.
-version: "0.1.25"
+description: Before starting, select the Codex model you want in App Configuration. Optionally enable controlled Home Assistant reload and restart actions. Use Codex in a Home Assistant sidebar workspace to review and edit your configuration.
+version: "0.1.26"
 slug: home_assistant_codex_app
 url: https://github.com/ambient-home-systems/ha-codex
 arch:
@@ -11,6 +11,7 @@ init: false
 ingress: true
 ingress_port: 7681
 ingress_stream: true
+homeassistant_api: true
 panel_icon: mdi:robot-outline
 panel_title: HA Codex
 map:
@@ -27,6 +28,8 @@ options:
   terminal_theme: dark
   session_persistence: true
   preserve_terminal_history: true
+  home_assistant_control: false
+  allow_home_assistant_restart: false
 schema:
   model: list(gpt-5.6-terra|gpt-5.6-sol|gpt-5.6-luna|gpt-5.6|gpt-5.5|gpt-5.4|gpt-5.4-mini|gpt-5.3-codex-spark)
   terminal_font_size: int(10,24)
@@ -34,3 +37,5 @@ schema:
   terminal_theme: list(dark|light)
   session_persistence: bool
   preserve_terminal_history: bool
+  home_assistant_control: bool
+  allow_home_assistant_restart: bool

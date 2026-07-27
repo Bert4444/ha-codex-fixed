@@ -28,7 +28,8 @@ RUN apk add --no-cache \
 
 COPY run.sh /run.sh
 COPY session.sh /usr/local/bin/ha-codex-session
-RUN chmod 0755 /run.sh /usr/local/bin/ha-codex-session \
+COPY ha-codex-ha /usr/local/bin/ha-codex-ha
+RUN chmod 0755 /run.sh /usr/local/bin/ha-codex-session /usr/local/bin/ha-codex-ha \
   && mkdir -p /homeassistant /config/codex /opt/codex
 
 WORKDIR /homeassistant

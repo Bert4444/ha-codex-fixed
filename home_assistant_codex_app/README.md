@@ -11,7 +11,8 @@ configuration directory.
 - Keep a Codex session alive while you leave and return to the Home Assistant sidebar.
 
 It deliberately does **not** request host networking, Docker access, full host
-access, or a Supervisor token.
+access, or Supervisor-management API access. Optional Home Assistant control
+uses the supported internal Core API through a restricted helper.
 
 ## Install from a personal repository
 
@@ -65,12 +66,30 @@ Codex.
 | **Terminal theme** | Dark | Sets the terminal color theme. |
 | **Session persistence** | On | Keeps the terminal session alive while the add-on is active when you leave the sidebar. |
 | **Preserve terminal history** | On | Runs Codex in inline transcript mode without an intermediate fullscreen terminal layer so browser scrollback works for long reviews. Recommended. |
+| **Allow Home Assistant control actions** | Off | Enables HA Codex's restricted configuration check and reload helper. |
+| **Allow Home Assistant Core restart** | Off | Allows the helper to restart Core after a successful configuration check. Requires control actions to be enabled. |
 
 For long reviews, leave **Preserve terminal history** on. A visible gold
 scrollbar at the right edge shows your position in the history: drag its thumb,
 use a mouse wheel or trackpad, or swipe inside the terminal on a touch device.
 The scrollbar navigates the full configured history buffer.
 Raise **Terminal scrollback** only if 10,000 lines is not enough.
+
+### Home Assistant control actions
+
+No separate API key, token, IP address, or host setup is needed. To allow
+Codex to validate configuration or reload supported areas, enable **Allow Home
+Assistant control actions** and restart HA Codex. To permit a Home Assistant
+Core restart, also enable **Allow Home Assistant Core restart**. Both settings
+are off by default.
+
+Codex uses the built-in `ha-codex-ha` helper, which can validate configuration,
+reload automations, scripts, scenes, groups, templates, Core configuration, or
+Lovelace resources, and restart Core only after validation. Codex must explain
+the action and request command approval first. The helper cannot control the
+host, Docker, Supervisor, updates, shutdown, or arbitrary Home Assistant
+services. Refresh the browser after dashboard changes; reloading Lovelace
+resources does not reload dashboard YAML or storage configuration by itself.
 
 ## Safe workflow
 
@@ -92,5 +111,5 @@ Create a Home Assistant backup and a Git checkpoint before significant edits.
 
 This is a terminal-based Codex workspace, not an Assist conversation agent. It
 can read and edit `/homeassistant` because that directory is intentionally
-mounted read/write. It cannot control Docker, access the host, or use a
-Supervisor token. Keep access to your Home Assistant account protected.
+mounted read/write. It cannot control Docker, access the host, or call the
+Supervisor-management API. Keep access to your Home Assistant account protected.

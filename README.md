@@ -26,7 +26,9 @@ normal file access and Codex operation continue as expected.
 | A Home Assistant add-on with a persistent terminal session | A host-level or Docker management tool |
 
 The add-on intentionally has **no** host networking, Docker socket, full host
-access, or Home Assistant Supervisor token.
+access, or Supervisor-management API access. Its optional Home Assistant
+control actions use Home Assistant's internal Core API through a small,
+allowlisted helper.
 
 ## Install
 
@@ -109,6 +111,29 @@ want before starting HA Codex. Restart the add-on after changing a setting.
 | **Terminal theme** | Dark | Selects the terminal color theme. |
 | **Session persistence** | On | Keeps the Codex terminal session running while the add-on is active when you leave and return to the sidebar. |
 | **Preserve terminal history** | On | Starts Codex in inline transcript mode without an intermediate fullscreen terminal layer, allowing xterm scrollback to work for long reviews. This is recommended. |
+| **Allow Home Assistant control actions** | Off | Lets Codex validate configuration and request only the supported reload actions through HA Codex's restricted helper. |
+| **Allow Home Assistant Core restart** | Off | Lets the helper restart Core only after a successful configuration check. Requires Home Assistant control actions to be enabled. |
+
+### Home Assistant reload and restart actions
+
+HA Codex can optionally validate configuration, reload selected configuration
+areas, and restart Home Assistant Core. This works entirely inside Home
+Assistant: no IP address, long-lived token, host terminal, Docker access, or
+additional installation is required.
+
+To enable it, turn on **Allow Home Assistant control actions** in
+**HA Codex → Configuration**, then restart the add-on. To permit Core restarts
+as well, explicitly turn on **Allow Home Assistant Core restart**. Both are off
+by default. Codex is instructed to show the intended action and ask for command
+approval before requesting a reload or restart.
+
+The built-in `ha-codex-ha` helper supports a configuration check; reloads for
+automations, scripts, scenes, groups, templates, Core configuration, and
+Lovelace resources; and a validated Core restart. It does not provide host,
+Docker, Supervisor, update, shutdown, or arbitrary Home Assistant service
+control. A dashboard configuration change can still require refreshing the
+browser; reloading Lovelace resources does not itself reload a dashboard's YAML
+or storage configuration.
 
 ### Long reviews and scrolling
 
