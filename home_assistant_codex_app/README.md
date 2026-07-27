@@ -13,7 +13,7 @@ configuration directory.
 It deliberately does **not** request host networking, Docker access, full host
 access, or a Supervisor token.
 
-## Install
+## Install from a personal repository
 
 1. In Home Assistant, open **Settings → Add-ons → Add-on Store → ⋮ → Repositories**.
 2. Add `https://github.com/ambient-home-systems/home-assistant-codex-app`.
@@ -25,6 +25,13 @@ Open the sidebar item. Codex starts automatically. On first use, select
 **Sign in with ChatGPT**, complete the browser sign-in, then return to the
 terminal. Your Codex session is stored in the add-on's private configuration
 folder and persists across restarts.
+
+## Model choice
+
+HA Codex defaults to **GPT-5.6 Terra**, which is the balanced choice for most
+Home Assistant configuration reviews and edits. In the add-on's
+**Configuration** tab, choose **GPT-5.6 Sol** temporarily for unusually
+difficult or broad tasks. Restart the add-on after changing the setting.
 
 ## Safe workflow
 

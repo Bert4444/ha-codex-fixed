@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.7
+
+- Changed the default Codex model to GPT-5.6 Terra to better balance everyday Home Assistant work and usage.
+- Added an add-on setting to choose GPT-5.6 Terra or GPT-5.6 Sol before startup.
+
 ## 0.1.6
 
 - Added a full repository setup guide with sign-in options, visual examples, safety guidance, and troubleshooting notes.

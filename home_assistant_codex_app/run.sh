@@ -2,7 +2,6 @@
 set -euo pipefail
 
 readonly CODEX_DATA_DIR="/config/codex"
-readonly SESSION_NAME="home-assistant-codex"
 
 mkdir -p "${CODEX_DATA_DIR}"
 
@@ -14,14 +13,17 @@ export CODEX_HOME="${CODEX_DATA_DIR}"
 FONT_SIZE="$(bashio::config 'terminal_font_size')"
 THEME="$(bashio::config 'terminal_theme')"
 PERSIST="$(bashio::config 'session_persistence')"
+MODEL="$(bashio::config 'model')"
+readonly SESSION_NAME="home-assistant-codex-${MODEL}"
 
 if [ "${PERSIST}" = "true" ]; then
-  COMMAND="tmux new-session -A -s ${SESSION_NAME} 'cd /homeassistant && codex; exec bash -l'"
+  COMMAND="tmux new-session -A -s ${SESSION_NAME} 'cd /homeassistant && codex --model ${MODEL}; exec bash -l'"
 else
-  COMMAND="cd /homeassistant && exec bash -lc 'codex; exec bash -l'"
+  COMMAND="cd /homeassistant && exec bash -lc 'codex --model ${MODEL}; exec bash -l'"
 fi
 
 bashio::log.info "Starting HA Codex."
+bashio::log.info "Using Codex model: ${MODEL}."
 bashio::log.info "On first use, choose Sign in with ChatGPT in Codex."
 
 exec /usr/local/bin/ttyd \

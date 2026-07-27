@@ -65,6 +65,13 @@ use your ChatGPT subscription allowance. Prefer the ChatGPT sign-in options
 above unless you specifically want API-billed usage. Never paste an API key in
 an issue, screenshot, chat, or repository file.
 
+## Model choice
+
+HA Codex defaults to **GPT-5.6 Terra**. It is the recommended balance for
+routine Home Assistant reviews, configuration edits, and dashboard work. Use
+the add-on's **Configuration** tab to select **GPT-5.6 Sol** only for an
+unusually difficult or broad task, then restart the add-on.
+
 ## Safe first prompts
 
 Start in review mode:
