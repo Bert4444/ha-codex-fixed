@@ -61,7 +61,7 @@ Codex.
 | --- | --- | --- |
 | **Model** | GPT-5.6 Terra | Starts new Codex sessions with Terra. Use Sol only for unusually difficult or broad work. |
 | **Terminal font size** | 14 | Sets terminal text size (10–24). |
-| **Terminal scrollback** | 10,000 lines | Keeps 1,000–50,000 lines of past terminal output in the browser. |
+| **Terminal scrollback** | 10,000 lines | Keeps 1,000–50,000 lines of past terminal output in both the browser and persistent terminal session. |
 | **Terminal theme** | Dark | Sets the terminal color theme. |
 | **Session persistence** | On | Keeps the terminal session alive when you leave the sidebar. |
 | **Preserve terminal history** | On | Runs Codex in inline transcript mode so browser scrollback works for long reviews. Recommended. |

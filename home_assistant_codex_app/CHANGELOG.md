@@ -2,6 +2,12 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.22
+
+- Applies the configured terminal-history limit to persistent tmux sessions.
+- Enables tmux mouse/copy-mode scrolling so wheel and trackpad gestures scroll history instead of recalling shell commands.
+- Starts a fresh persistent session so the history and mouse settings take effect after updating.
+
 ## 0.1.21
 
 - Made the history rail navigate xterm's full terminal buffer directly instead of the browser viewport.
