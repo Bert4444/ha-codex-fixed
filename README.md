@@ -45,7 +45,8 @@ access, or Home Assistant Supervisor token.
 
 On its first launch, HA Codex shows a two-option sign-in menu. Use a ChatGPT
 account that has access to Codex for device-code sign-in; ChatGPT subscription
-access and OpenAI API billing are separate.
+access and OpenAI API billing are separate. After updating from an earlier
+version, restart HA Codex to begin this revised sign-in flow in a fresh session.
 
 ### 1. Log in with a different device (Preferred Method)
 

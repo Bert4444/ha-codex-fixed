@@ -23,7 +23,8 @@ if [ "${PRESERVE_HISTORY}" = "true" ]; then
   TERMINAL_MODE="inline"
 fi
 
-readonly SESSION_NAME="home-assistant-codex-${MODEL}-${TERMINAL_MODE}"
+readonly AUTH_FLOW_VERSION="device-code-v1"
+readonly SESSION_NAME="home-assistant-codex-${MODEL}-${TERMINAL_MODE}-${AUTH_FLOW_VERSION}"
 TTYD_INDEX_ARGS=()
 
 if [ "${PERSIST}" = "true" ]; then

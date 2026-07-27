@@ -22,7 +22,8 @@ access, or a Supervisor token.
 ## First sign-in
 
 Open the sidebar item. Codex starts automatically. On first use, HA Codex
-shows a two-option sign-in menu.
+shows a two-option sign-in menu. After updating from an earlier version,
+restart HA Codex to begin this revised sign-in flow in a fresh session.
 
 1. **Log in with a different device (Preferred Method):** complete the secure,
    one-time code sign-in from a phone, tablet, or another computer, then return

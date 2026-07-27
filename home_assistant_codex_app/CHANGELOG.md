@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.20
+
+- Start a fresh persistent terminal session after the sign-in-menu update so existing sessions do not retain Codex's previous three-choice prompt.
+
 ## 0.1.19
 
 - Replaced Codex's three-choice first-run login screen with an HA Codex sign-in menu.
