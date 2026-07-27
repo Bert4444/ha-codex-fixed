@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.17
+
+- Removed the current-browser sign-in path from setup instructions.
+- Promoted **Log in with a different device (Preferred Method)** to sign-in option 1 and renumbered the API-key path as option 2.
+
 ## 0.1.16
 
 - Replaced wordy Top/End controls with compact, accessible up/down arrows.
