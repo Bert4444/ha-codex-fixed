@@ -46,9 +46,11 @@ Change these in the add-on's **Configuration** tab, then restart HA Codex.
 | **Session persistence** | On | Keeps the terminal session alive when you leave the sidebar. |
 | **Preserve terminal history** | On | Runs Codex in inline transcript mode so browser scrollback works for long reviews. Recommended. |
 
-For long reviews, leave **Preserve terminal history** on. Scroll with the
-pointer over the terminal, or swipe inside the terminal output on touch
-devices. Raise **Terminal scrollback** only if 10,000 lines is not enough.
+For long reviews, leave **Preserve terminal history** on. A golden scrollbar
+appears at the right edge of the terminal; drag it to move through the saved
+transcript. You can also scroll with a mouse wheel or swipe inside the terminal
+output on touch devices. Raise **Terminal scrollback** only if 10,000 lines is
+not enough.
 
 ## Safe workflow
 

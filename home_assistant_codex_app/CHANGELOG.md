@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.11
+
+- Added an always-visible, touch-draggable terminal scrollbar for reviewing long Codex responses in Home Assistant.
+- Kept the browser's native scrollbar available as well, where the device shows it.
+
 ## 0.1.10
 
 - Added Preserve terminal history, which starts Codex in inline transcript mode so long reviews can be scrolled in Home Assistant.

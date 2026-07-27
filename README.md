@@ -97,10 +97,11 @@ after changing a setting.
 ### Long reviews and scrolling
 
 With **Preserve terminal history** on, a long review stays in the normal
-terminal transcript so the browser can scroll through it. Scroll with the
-pointer over the terminal; on a touch device, swipe inside the terminal output.
-Increase **Terminal scrollback** to 20,000 only if 10,000 lines is genuinely
-not enough.
+terminal transcript so the browser can scroll through it. HA Codex shows a
+golden scrollbar on the right edge of the terminal; drag its handle to jump
+through the transcript. You can also use a mouse wheel or swipe inside the
+terminal output on a touch device. Increase **Terminal scrollback** to 20,000
+only if 10,000 lines is genuinely not enough.
 
 ## Safe first prompts
 
