@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.23
+
+- Initializes xterm's history buffer with the configured scrollback size before terminal output arrives.
+- Fixed long output being limited to the visible screen despite a larger Terminal scrollback setting.
+
 ## 0.1.22
 
 - Applies the configured terminal-history limit to persistent tmux sessions.

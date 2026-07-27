@@ -105,7 +105,7 @@ want before starting HA Codex. Restart the add-on after changing a setting.
 | --- | --- | --- |
 | **Model** | GPT-5.6 Terra | The starting model for new Codex sessions. Use Sol only for unusually difficult or broad work. |
 | **Terminal font size** | 14 | Changes the terminal text size (10–24). |
-| **Terminal scrollback** | 10,000 lines | Sets how much past terminal output is retained (1,000–50,000 lines) in both the browser and persistent terminal session. 10,000 is a practical balance. |
+| **Terminal scrollback** | 10,000 lines | Sets how much past terminal output is retained (1,000–50,000 lines) in both the browser and persistent terminal session, including output produced immediately after startup. 10,000 is a practical balance. |
 | **Terminal theme** | Dark | Selects the terminal color theme. |
 | **Session persistence** | On | Keeps the Codex terminal session running when you leave and return to the sidebar. |
 | **Preserve terminal history** | On | Starts Codex in inline transcript mode instead of its alternate screen, allowing browser scrollback to work for long reviews. This is recommended. |
