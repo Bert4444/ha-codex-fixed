@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.25
+
+- Added a permanently visible, styled native xterm scrollbar for terminal history.
+- Removed the unused synthetic history gutter so the terminal keeps its full width.
+
 ## 0.1.24
 
 - Removed the tmux display layer from inline-history mode so Codex output reaches xterm's scrollback buffer directly.
