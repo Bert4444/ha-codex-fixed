@@ -1,6 +1,10 @@
 # Changelog
 
-All notable changes to Home Assistant Codex App are documented here.
+All notable changes to HA Codex are documented here.
+
+## 0.1.3
+
+- Renamed the visible app and sidebar label to **HA Codex**.
 
 ## 0.1.2
 
