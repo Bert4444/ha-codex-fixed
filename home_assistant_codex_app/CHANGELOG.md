@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.12
+
+- Made the recommended **Log in with a different device** sign-in path prominent in both READMEs.
+
 ## 0.1.11
 
 - Added an always-visible, touch-draggable terminal scrollbar for reviewing long Codex responses in Home Assistant.

@@ -22,9 +22,16 @@ access, or a Supervisor token.
 ## First sign-in
 
 Open the sidebar item. Codex starts automatically. On first use, select
-**Sign in with ChatGPT**, complete the browser sign-in, then return to the
-terminal. Your Codex session is stored in the add-on's private configuration
-folder and persists across restarts.
+**Sign in with ChatGPT**.
+
+> [!IMPORTANT]
+> **Recommended:** choose **Log in with a different device**. Complete the
+> secure, one-time code sign-in from a phone, tablet, or another computer, then
+> return to HA Codex. This avoids browser and pop-up limits in the embedded
+> Home Assistant page.
+
+Your Codex session is stored in the add-on's private configuration folder and
+persists across restarts.
 
 ## Model choice
 

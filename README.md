@@ -53,14 +53,19 @@ Choose the browser sign-in option and complete the ChatGPT sign-in page that
 opens. Use this when the browser you are currently using to reach Home
 Assistant is the same one you want to authenticate.
 
-### 2. Log in with a different device — recommended
+### 2. Log in with a different device
 
-Choose **Log in with a different device**. Codex will display a secure URL and
-a one-time code. Open that URL on a phone, tablet, or another computer, sign in
-to your ChatGPT account, enter the code if asked, and return to HA Codex.
-
-This is the preferred option because it avoids browser or pop-up limitations in
-Home Assistant’s embedded add-on page. The code is temporary; never share it.
+> [!IMPORTANT]
+> **Recommended for most Home Assistant installations**
+>
+> Choose **Log in with a different device**. Codex will display a secure URL
+> and one-time code. Open the URL on a phone, tablet, or another computer,
+> sign in to your ChatGPT account, enter the code if asked, then return to HA
+> Codex.
+>
+> This is the preferred option because it avoids browser and pop-up limitations
+> in Home Assistant’s embedded add-on page. The code is temporary—never share
+> it.
 
 > [!NOTE]
 > Device codes are deliberately not shown in public screenshots. Treat the
