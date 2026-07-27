@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.21
+
+- Made the history rail navigate xterm's full terminal buffer directly instead of the browser viewport.
+- Explicitly reapplies the configured terminal scrollback size after the terminal client initializes.
+
 ## 0.1.20
 
 - Start a fresh persistent terminal session after the sign-in-menu update so existing sessions do not retain Codex's previous three-choice prompt.

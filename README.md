@@ -116,7 +116,8 @@ With **Preserve terminal history** on, a long review stays in the normal
 terminal transcript so the browser can scroll through it. HA Codex reserves a
 slim right-side history gutter so controls never cover terminal text: drag its
 golden handle, use the **up/down arrows**, scroll with a mouse wheel or trackpad,
-or swipe inside the terminal on a touch device. Increase **Terminal
+or swipe inside the terminal on a touch device. The rail navigates the full
+configured history buffer. Increase **Terminal
 scrollback** to 20,000 only if 10,000 lines is genuinely not enough.
 
 ## Safe first prompts

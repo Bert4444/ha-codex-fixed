@@ -69,7 +69,7 @@ Codex.
 For long reviews, leave **Preserve terminal history** on. HA Codex reserves a
 slim right-side history gutter: drag the golden handle, use the **up/down
 arrows**, use a mouse wheel or trackpad, or swipe inside the terminal on a touch
-device.
+device. The rail navigates the full configured history buffer.
 Raise **Terminal scrollback** only if 10,000 lines is not enough.
 
 ## Safe workflow
