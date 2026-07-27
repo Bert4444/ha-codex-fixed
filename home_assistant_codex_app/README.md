@@ -16,7 +16,7 @@ access, or a Supervisor token.
 ## Install
 
 1. In Home Assistant, open **Settings → Add-ons → Add-on Store → ⋮ → Repositories**.
-2. Add `https://github.com/joshuamallow/home-assistant-codex-app`.
+2. Add `https://github.com/ambient-home-systems/home-assistant-codex-app`.
 3. Install **Home Assistant Codex App**, start it, and enable **Show in sidebar**.
 
 ## First sign-in
