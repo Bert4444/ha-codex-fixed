@@ -1,0 +1,30 @@
+name: Home Assistant Codex App
+description: Use Codex in a Home Assistant sidebar workspace to review and edit your Home Assistant configuration.
+version: "0.1.0"
+slug: home_assistant_codex_app
+url: https://github.com/joshuamallow/home-assistant-codex-app
+arch:
+  - amd64
+startup: application
+boot: auto
+init: false
+ingress: true
+ingress_port: 7681
+ingress_stream: true
+panel_icon: mdi:robot-outline
+panel_title: Home Assistant Codex App
+map:
+  - type: homeassistant_config
+    read_only: false
+    path: /homeassistant
+  - type: addon_config
+    read_only: false
+    path: /config
+options:
+  terminal_font_size: 14
+  terminal_theme: dark
+  session_persistence: true
+schema:
+  terminal_font_size: int(10,24)
+  terminal_theme: list(dark|light)
+  session_persistence: bool
