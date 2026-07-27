@@ -63,8 +63,8 @@ Codex.
 | **Terminal font size** | 14 | Sets terminal text size (10–24). |
 | **Terminal scrollback** | 10,000 lines | Keeps 1,000–50,000 lines of past terminal output in both the browser and persistent terminal session, including output produced immediately after startup. |
 | **Terminal theme** | Dark | Sets the terminal color theme. |
-| **Session persistence** | On | Keeps the terminal session alive when you leave the sidebar. |
-| **Preserve terminal history** | On | Runs Codex in inline transcript mode so browser scrollback works for long reviews. Recommended. |
+| **Session persistence** | On | Keeps the terminal session alive while the add-on is active when you leave the sidebar. |
+| **Preserve terminal history** | On | Runs Codex in inline transcript mode without an intermediate fullscreen terminal layer so browser scrollback works for long reviews. Recommended. |
 
 For long reviews, leave **Preserve terminal history** on. HA Codex reserves a
 slim right-side history gutter: drag the golden handle, use the **up/down

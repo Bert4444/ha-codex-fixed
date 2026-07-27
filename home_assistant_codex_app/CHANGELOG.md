@@ -2,6 +2,12 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.24
+
+- Removed the tmux display layer from inline-history mode so Codex output reaches xterm's scrollback buffer directly.
+- Restored the visible history rail and mouse-wheel scrolling for long Codex responses.
+- Keeps fullscreen-mode session persistence through tmux while ttyd owns the inline session for the add-on runtime.
+
 ## 0.1.23
 
 - Initializes xterm's history buffer with the configured scrollback size before terminal output arrives.
