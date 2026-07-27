@@ -1,17 +1,15 @@
 #!/usr/bin/with-contenv bashio
 set -euo pipefail
 
-readonly CODEX_HOME="/config/codex"
+readonly CODEX_DATA_DIR="/config/codex"
 readonly SESSION_NAME="home-assistant-codex"
 
-mkdir -p "${CODEX_HOME}"
+mkdir -p "${CODEX_DATA_DIR}"
 
 # Persist the ChatGPT session and Codex settings in the add-on's own storage.
-# This avoids putting credentials in /homeassistant or the add-on option form.
-if [ -e /root/.codex ] && [ ! -L /root/.codex ]; then
-  rm -rf /root/.codex
-fi
-ln -sfn "${CODEX_HOME}" /root/.codex
+# The CLI binary is installed under /opt/codex at build time, so its managed
+# package files are kept separate from this runtime configuration directory.
+export CODEX_HOME="${CODEX_DATA_DIR}"
 
 FONT_SIZE="$(bashio::config 'terminal_font_size')"
 THEME="$(bashio::config 'terminal_theme')"
