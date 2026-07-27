@@ -1,4 +1,4 @@
-# Home Assistant Codex App repository
+# HA Codex repository
 
 This is a Home Assistant add-on repository containing the
 `home_assistant_codex_app` add-on.
