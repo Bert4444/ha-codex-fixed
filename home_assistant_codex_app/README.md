@@ -75,6 +75,7 @@ Codex.
 | **Terminal theme** | Dark | Sets the terminal color theme. |
 | **Session persistence** | On | Keeps the active Codex session running when you leave HA Codex for another Home Assistant page, then reconnects it when you return. |
 | **Preserve terminal history** | On | Keeps the visible browser scrollbar and long inline transcript while the active session persists in the background. Recommended. |
+| **Patch compatibility mode** | On | Lets Codex use normal patches on Home Assistant OS, avoiding the nested Bubblewrap restriction that otherwise forces a shell-edit fallback. Command approval behavior is unchanged. |
 | **Allow Home Assistant control actions** | Off | Enables HA Codex's restricted configuration check and reload helper. |
 | **Allow Home Assistant Core restart** | Off | Allows the helper to restart Core after a successful configuration check. Requires control actions to be enabled. |
 
@@ -83,6 +84,17 @@ scrollbar at the right edge shows your position in the history: drag its thumb,
 use a mouse wheel or trackpad, or swipe inside the terminal on a touch device.
 The scrollbar navigates the full configured history buffer.
 Raise **Terminal scrollback** only if 5,000 lines is not enough.
+
+### Patches on Home Assistant OS
+
+Leave **Patch compatibility mode** enabled (the default). Home Assistant OS
+does not allow the nested unprivileged Bubblewrap namespace Codex normally uses
+for patches. Without this mode, Codex may report that its normal patch mechanism
+is unavailable before it touches a file and use a shell-edit fallback instead.
+Patch compatibility mode uses HA Codex's existing add-on container boundary so
+normal patches work without host, Docker, or Supervisor-management access. It
+does not change Codex's command-approval behavior. Disable it only when
+diagnosing a sandbox-related issue.
 
 ### Home Assistant control actions
 

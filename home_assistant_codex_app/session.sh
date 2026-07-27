@@ -53,8 +53,21 @@ if ! codex login status >/dev/null 2>&1; then
   done
 fi
 
-if [ "${TERMINAL_MODE}" = "inline" ]; then
-  exec codex --config "${HA_CODEX_CONFIG_OVERRIDE}" --no-alt-screen --model "${MODEL}"
+CODEX_ARGS=(--config "${HA_CODEX_CONFIG_OVERRIDE}")
+
+# Home Assistant OS does not allow the nested unprivileged user namespace that
+# Codex's Bubblewrap sandbox needs for apply_patch. The add-on is already the
+# security boundary: it has no host, Docker, or Supervisor-management access.
+# Use that container boundary for normal patches while leaving Codex's command
+# approval policy untouched. The setting remains available for troubleshooting.
+if [ "${HA_CODEX_PATCH_COMPATIBILITY_MODE:-true}" = "true" ]; then
+  CODEX_ARGS+=(--config 'sandbox_mode="danger-full-access"')
 fi
 
-exec codex --config "${HA_CODEX_CONFIG_OVERRIDE}" --model "${MODEL}"
+CODEX_ARGS+=(--model "${MODEL}")
+
+if [ "${TERMINAL_MODE}" = "inline" ]; then
+  exec codex --no-alt-screen "${CODEX_ARGS[@]}"
+fi
+
+exec codex "${CODEX_ARGS[@]}"

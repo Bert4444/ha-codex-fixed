@@ -1,6 +1,6 @@
 name: HA Codex
-description: Before starting, select the Codex model in App Configuration. To let Codex validate, reload, or restart Home Assistant, enable "Allow Home Assistant control actions" (and separately "Allow Home Assistant Core restart"), then restart this add-on.
-version: "0.1.28"
+description: Before starting, select the Codex model in App Configuration. Patch compatibility mode is enabled by default so Codex can use normal patches on Home Assistant OS. To let Codex validate, reload, or restart Home Assistant, enable "Allow Home Assistant control actions" (and separately "Allow Home Assistant Core restart"), then restart this add-on.
+version: "0.1.29"
 slug: home_assistant_codex_app
 url: https://github.com/ambient-home-systems/ha-codex
 arch:
@@ -28,6 +28,7 @@ options:
   terminal_theme: dark
   session_persistence: true
   preserve_terminal_history: true
+  patch_compatibility_mode: true
   home_assistant_control: false
   allow_home_assistant_restart: false
 schema:
@@ -37,5 +38,6 @@ schema:
   terminal_theme: list(dark|light)
   session_persistence: bool
   preserve_terminal_history: bool
+  patch_compatibility_mode: bool
   home_assistant_control: bool
   allow_home_assistant_restart: bool

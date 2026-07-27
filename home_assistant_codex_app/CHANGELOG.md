@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.29
+
+- Added default-on Patch compatibility mode so Codex's normal `apply_patch` mechanism works on Home Assistant OS, where nested Bubblewrap user namespaces are unavailable.
+- Kept normal Codex command-approval behavior unchanged and added a Configuration toggle for troubleshooting.
+
 ## 0.1.28
 
 - Made session persistence work with the default inline-history mode, so Codex stays running when you leave the HA Codex sidebar and reattaches when you return.
