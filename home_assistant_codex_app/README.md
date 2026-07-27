@@ -33,13 +33,22 @@ Home Assistant configuration reviews and edits. In the add-on's
 **Configuration** tab, choose **GPT-5.6 Sol** temporarily for unusually
 difficult or broad tasks. Restart the add-on after changing the setting.
 
-## Long reviews and terminal history
+## Add-on settings
 
-HA Codex keeps **20,000 lines** of terminal history by default, so long reviews
-remain scrollable in the sidebar. You can adjust **Terminal scrollback** in the
-add-on's **Configuration** tab (1,000–50,000 lines) and then restart the
-add-on. Place the pointer over the terminal and scroll normally; on a touch
-screen, swipe within the terminal output.
+Change these in the add-on's **Configuration** tab, then restart HA Codex.
+
+| Setting | Default | What it does |
+| --- | --- | --- |
+| **Model** | GPT-5.6 Terra | Starts new Codex sessions with Terra. Use Sol only for unusually difficult or broad work. |
+| **Terminal font size** | 14 | Sets terminal text size (10–24). |
+| **Terminal scrollback** | 10,000 lines | Keeps 1,000–50,000 lines of past terminal output in the browser. |
+| **Terminal theme** | Dark | Sets the terminal color theme. |
+| **Session persistence** | On | Keeps the terminal session alive when you leave the sidebar. |
+| **Preserve terminal history** | On | Runs Codex in inline transcript mode so browser scrollback works for long reviews. Recommended. |
+
+For long reviews, leave **Preserve terminal history** on. Scroll with the
+pointer over the terminal, or swipe inside the terminal output on touch
+devices. Raise **Terminal scrollback** only if 10,000 lines is not enough.
 
 ## Safe workflow
 

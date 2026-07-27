@@ -2,6 +2,12 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.10
+
+- Added Preserve terminal history, which starts Codex in inline transcript mode so long reviews can be scrolled in Home Assistant.
+- Reduced the default terminal history buffer to 10,000 lines for a better browser-memory balance.
+- Documented every add-on setting in the repository and add-on READMEs.
+
 ## 0.1.9
 
 - Increased the terminal history buffer to 20,000 lines so long Codex reviews remain scrollable.

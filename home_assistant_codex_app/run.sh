@@ -14,17 +14,27 @@ FONT_SIZE="$(bashio::config 'terminal_font_size')"
 SCROLLBACK="$(bashio::config 'terminal_scrollback')"
 THEME="$(bashio::config 'terminal_theme')"
 PERSIST="$(bashio::config 'session_persistence')"
+PRESERVE_HISTORY="$(bashio::config 'preserve_terminal_history')"
 MODEL="$(bashio::config 'model')"
-readonly SESSION_NAME="home-assistant-codex-${MODEL}"
+CODEX_TUI_FLAG=""
+TERMINAL_MODE="fullscreen"
+
+if [ "${PRESERVE_HISTORY}" = "true" ]; then
+  CODEX_TUI_FLAG="--no-alt-screen"
+  TERMINAL_MODE="inline"
+fi
+
+readonly SESSION_NAME="home-assistant-codex-${MODEL}-${TERMINAL_MODE}"
 
 if [ "${PERSIST}" = "true" ]; then
-  COMMAND="tmux new-session -A -s ${SESSION_NAME} 'cd /homeassistant && codex --model ${MODEL}; exec bash -l'"
+  COMMAND="tmux new-session -A -s ${SESSION_NAME} 'cd /homeassistant && codex ${CODEX_TUI_FLAG} --model ${MODEL}; exec bash -l'"
 else
-  COMMAND="cd /homeassistant && exec bash -lc 'codex --model ${MODEL}; exec bash -l'"
+  COMMAND="cd /homeassistant && exec bash -lc 'codex ${CODEX_TUI_FLAG} --model ${MODEL}; exec bash -l'"
 fi
 
 bashio::log.info "Starting HA Codex."
 bashio::log.info "Using Codex model: ${MODEL}."
+bashio::log.info "Terminal history mode: ${TERMINAL_MODE}."
 bashio::log.info "On first use, choose Sign in with ChatGPT in Codex."
 
 exec /usr/local/bin/ttyd \
