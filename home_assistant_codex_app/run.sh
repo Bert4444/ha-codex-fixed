@@ -21,7 +21,7 @@ else
   COMMAND="cd /homeassistant && exec bash -lc 'codex; exec bash -l'"
 fi
 
-bashio::log.info "Starting Home Assistant Codex App."
+bashio::log.info "Starting HA Codex."
 bashio::log.info "On first use, choose Sign in with ChatGPT in Codex."
 
 exec /usr/local/bin/ttyd \
