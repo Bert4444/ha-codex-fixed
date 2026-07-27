@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 0.1.13
+
+- Added all currently documented Codex CLI models to the Configuration selector.
+- Documented the model choices and clarified the difference between the add-on default and Codex's in-session `/model` command.
+
 ## 0.1.12
 
 - Made the recommended **Log in with a different device** sign-in path prominent in both READMEs.

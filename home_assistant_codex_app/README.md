@@ -35,10 +35,17 @@ persists across restarts.
 
 ## Model choice
 
-HA Codex defaults to **GPT-5.6 Terra**, which is the balanced choice for most
-Home Assistant configuration reviews and edits. In the add-on's
-**Configuration** tab, choose **GPT-5.6 Sol** temporarily for unusually
-difficult or broad tasks. Restart the add-on after changing the setting.
+HA Codex defaults to **GPT-5.6 Terra**, the balanced choice for most Home
+Assistant configuration reviews and edits. The Configuration tab also offers
+GPT-5.6 Sol (hard, open-ended work), GPT-5.6 Luna (clear, repeatable work),
+GPT-5.6, GPT-5.5, GPT-5.4, GPT-5.4 Mini, and the ChatGPT Pro-only GPT-5.3
+Codex Spark preview.
+
+This setting launches Codex with the selected model every time the add-on
+starts, so it is the durable default. Use `/model` inside Codex to change the
+currently active session immediately. Restart the add-on after changing the
+Configuration setting; your ChatGPT plan determines which listed models are
+available to you.
 
 ## Add-on settings
 

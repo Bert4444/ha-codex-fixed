@@ -80,10 +80,26 @@ an issue, screenshot, chat, or repository file.
 
 ## Model choice
 
-HA Codex defaults to **GPT-5.6 Terra**. It is the recommended balance for
-routine Home Assistant reviews, configuration edits, and dashboard work. Use
-the add-on's **Configuration** tab to select **GPT-5.6 Sol** only for an
-unusually difficult or broad task, then restart the add-on.
+HA Codex defaults to **GPT-5.6 Terra**: the sensible balance for routine Home
+Assistant reviews, configuration edits, and dashboard work. The Configuration
+tab offers every currently documented Codex CLI model:
+
+| Model | Best use |
+| --- | --- |
+| **GPT-5.6 Terra** (default) | Everyday Home Assistant work; the best balance of quality, speed, and usage. |
+| **GPT-5.6 Sol** | Difficult, ambiguous, high-value work that benefits from more analysis and polish. |
+| **GPT-5.6 Luna** | Clear, repeatable, or high-volume work where speed and lower usage matter. |
+| **GPT-5.6** | The general GPT-5.6 default model alias. |
+| **GPT-5.5** | The prior-generation frontier model. |
+| **GPT-5.4** / **GPT-5.4 Mini** | Older general-purpose and lightweight options. |
+| **GPT-5.3 Codex Spark** | A text-only, real-time coding preview for ChatGPT Pro accounts. |
+
+The Configuration setting starts Codex with `--model` every time the add-on
+starts. It is your durable startup preference. In contrast, `/model` inside
+Codex changes the model of the active session immediately. After changing the
+add-on setting, restart HA Codex; with session persistence on, this also opens
+the matching model-specific terminal session. Account access still controls
+which choices will actually run.
 
 ## Add-on settings
 
