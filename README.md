@@ -165,9 +165,10 @@ or storage configuration.
 
 With **Preserve terminal history** on, a long review stays in the normal
 terminal transcript so the browser can scroll through it. A visible gold
-history rail at the right edge shows your position in the history: drag its
-thumb, scroll with a mouse wheel or trackpad, or swipe inside the terminal on a
-touch device. The rail navigates the full configured history buffer even when
+history rail at the right edge shows your position in the history: use its
+up/down buttons, click or drag its track, scroll with a mouse wheel or
+trackpad, or swipe inside the terminal on a touch device. The rail navigates
+the full configured history buffer even when
 Home Assistant hides the browser's native scrollbar. Increase **Terminal
 scrollback** only if 5,000 lines is genuinely not enough.
 

@@ -97,9 +97,10 @@ Codex.
 | **Allow Home Assistant Core restart** | Off | Allows the helper to restart Core after a successful configuration check. Requires control actions to be enabled. |
 
 For long reviews, leave **Preserve terminal history** on. A visible gold
-history rail at the right edge shows your position in the history: drag its
-thumb, use a mouse wheel or trackpad, or swipe inside the terminal on a touch
-device. The rail navigates the full configured history buffer even when Home
+history rail at the right edge shows your position in the history: use its
+up/down buttons, click or drag its track, use a mouse wheel or trackpad, or
+swipe inside the terminal on a touch device. The rail navigates the full
+configured history buffer even when Home
 Assistant hides the browser's native scrollbar.
 Raise **Terminal scrollback** only if 5,000 lines is not enough.
 

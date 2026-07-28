@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.2.0
+
+- Rebuilt the terminal history rail injection to avoid `sed` replacement corruption that prevented prior rails from working and caused layout artifacts.
+- The side rail now stays visible and supports arrows, clicking its track, and dragging its thumb, while retaining persistent sessions and mouse-wheel scrolling.
+
 ## 1.1.9
 
 - Removed the malformed interactive history-rail fallback that could obscure the terminal with a large banner. Mouse-wheel and trackpad scrolling remain available.
