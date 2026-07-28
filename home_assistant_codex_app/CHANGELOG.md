@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.1.2
+
+- Added an always-visible terminal-history rail that reads xterm's full buffer directly, including on Home Assistant's embedded browsers that hide native overlay scrollbars.
+- Restored mouse-wheel terminal-history navigation through the rail's xterm buffer handling.
+
 ## 1.1.1
 
 - Restored the stable persistent terminal-session identity so existing terminal scrollback and its visible scrollbar remain available after updating.
