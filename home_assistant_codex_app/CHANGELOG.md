@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.1.6
+
+- Added an always-visible history rail for persistent tmux sessions, including arrow controls and a draggable track that use the same working wheel-navigation path.
+
 ## 1.1.5
 
 - Loads tmux's mouse and alternate-screen settings before its server starts, preserving the browser's xterm scrollback and visible scrollbar for persistent sessions.
