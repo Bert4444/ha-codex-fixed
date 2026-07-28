@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.1.8
+
+- Made the always-visible history rail interactive: click or drag its track, or use its arrows, to navigate terminal scrollback in addition to mouse-wheel and trackpad scrolling.
+
 ## 1.1.7
 
 - Added a CSS-rendered, always-visible history indicator for embedded browsers that defer the terminal page's injected rail script.
