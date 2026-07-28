@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.0.0
+
+- Released the first official stable version of HA Codex.
+- Refreshed the repository introduction and added a Buy Me a Coffee support link at the top of the GitHub README.
+
 ## 0.1.29
 
 - Added default-on Patch compatibility mode so Codex's normal `apply_patch` mechanism works on Home Assistant OS, where nested Bubblewrap user namespaces are unavailable.

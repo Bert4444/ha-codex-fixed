@@ -1,9 +1,13 @@
 # HA Codex
 
-Run OpenAI Codex in a focused Home Assistant sidebar workspace. HA Codex can
-read and edit the files in your Home Assistant configuration directory, making
-it useful for reviewing or improving YAML, automations, scripts, dashboards,
-packages, and custom components.
+[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=Joshua.ambient.home&button_colour=40DCA5&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00)](https://www.buymeacoffee.com/Joshua.ambient.home)
+
+> ## **HA Codex** — OpenAI Codex for Home Assistant
+>
+> Work with Codex directly from your Home Assistant sidebar. HA Codex gives it
+> focused, read/write access to your configuration so it can review and improve
+> YAML, dashboards, automations, scripts, packages, custom components, and
+> documentation—while you stay in control of every change.
 
 > [!CAUTION]
 > HA Codex can modify your Home Assistant configuration. Make a Home Assistant
