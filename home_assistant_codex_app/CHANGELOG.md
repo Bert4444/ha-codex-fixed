@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.1.9
+
+- Removed the malformed interactive history-rail fallback that could obscure the terminal with a large banner. Mouse-wheel and trackpad scrolling remain available.
+
 ## 1.1.8
 
 - Made the always-visible history rail interactive: click or drag its track, or use its arrows, to navigate terminal scrollback in addition to mouse-wheel and trackpad scrolling.
