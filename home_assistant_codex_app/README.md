@@ -4,6 +4,8 @@ Use OpenAI Codex in a Home Assistant sidebar workspace. The add-on starts a
 persistent web terminal in `/homeassistant`, which is your Home Assistant
 configuration directory.
 
+☕ [Support HA Codex and future Home Assistant add-on development](https://www.buymeacoffee.com/Joshua.ambient.home)
+
 > [!IMPORTANT]
 > ## Enable Home Assistant reload and restart actions
 >

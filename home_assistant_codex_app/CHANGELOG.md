@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.0.1
+
+- Minor documentation update.
+
 ## 1.0.0
 
 - Released the first official stable version of HA Codex.
