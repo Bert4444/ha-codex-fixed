@@ -45,25 +45,37 @@ allowlisted helper.
 
 ## Install
 
-1. In Home Assistant, go to **Settings → Add-ons → Add-on Store**.
-2. Select the three-dot menu → **Repositories**.
-3. Add this repository URL:
+[![Add HA Codex repository to Home Assistant](https://my.home-assistant.io/badges/supervisor.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fambient-home-systems%2Fha-codex)
 
-   ```text
-   https://github.com/ambient-home-systems/ha-codex
-   ```
+1. Select the button above to open your Home Assistant instance with the HA
+   Codex repository URL pre-filled, then add the repository.
+2. Open **Settings → Apps → App Store**.
+3. Find **HA Codex**, then select **Install** and **Start**.
+4. Enable **Show in sidebar**, then open **HA Codex** from the sidebar.
 
-4. Find **HA Codex**, select **Install**, then **Start** it.
-5. Enable **Show in sidebar**, then open **HA Codex** from the sidebar.
+If the button does not open your Home Assistant instance, open the App Store
+and use its repository-management option to add:
+
+```text
+https://github.com/ambient-home-systems/ha-codex
+```
 
 ## First-time sign-in
 
-On its first launch, HA Codex shows a two-option sign-in menu. Use a ChatGPT
-account that has access to Codex for device-code sign-in; ChatGPT subscription
-access and OpenAI API billing are separate. After updating from an earlier
-version, restart HA Codex to begin this revised sign-in flow in a fresh session.
+On its first launch, HA Codex shows a three-option sign-in menu. Use a ChatGPT
+account that has access to Codex for browser or device-code sign-in; ChatGPT
+subscription access and OpenAI API billing are separate. After updating from an
+earlier version, restart HA Codex to begin this revised sign-in flow in a fresh
+session.
 
-### 1. Log in with a different device (Preferred Method)
+### 1. Sign in with ChatGPT in a browser
+
+Choose **Sign in with ChatGPT in a browser** to start Codex's normal browser
+sign-in flow. If Home Assistant cannot open a browser automatically, Codex
+shows a secure sign-in URL in the terminal. Copy or enter that URL in any
+browser, sign in to ChatGPT, then return to HA Codex.
+
+### 2. Log in with a different device (Preferred Method)
 
 > [!IMPORTANT]
 > **Recommended for most Home Assistant installations**
@@ -81,7 +93,7 @@ version, restart HA Codex to begin this revised sign-in flow in a fresh session.
 > Device codes are deliberately not shown in public screenshots. Treat the
 > temporary URL and code as sign-in credentials and keep them private.
 
-### 2. OpenAI API key (only if your Codex sign-in screen offers it)
+### 3. OpenAI API key (only if your Codex sign-in screen offers it)
 
 An API key is a separate, usage-billed OpenAI Platform account. It does **not**
 use your ChatGPT subscription allowance. Prefer the ChatGPT sign-in options
@@ -213,8 +225,16 @@ Every release has three matching records:
 - User-facing Home Assistant update notes in `home_assistant_codex_app/CHANGELOG.md`.
 - A tagged [GitHub Release](https://github.com/ambient-home-systems/ha-codex/releases).
 
-Use the Add-on Store to install updates. Open the update details before
+Use the App Store to install updates. Open the update details before
 installing to read the changelog.
+
+## Contributing
+
+Please review and understand every proposed change before submitting it. If HA
+Codex is ever contributed to an Open Home Foundation project, the contributor
+must personally review and own the work and all communication with maintainers;
+do not use an autonomous agent to submit issues, pull requests, or responses.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## Support and privacy
 

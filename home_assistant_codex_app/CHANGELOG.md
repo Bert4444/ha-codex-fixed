@@ -2,6 +2,13 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.1.0
+
+- Restored browser-based ChatGPT sign-in: Codex provides a terminal URL when a browser cannot open automatically.
+- Kept Device Code as the preferred sign-in method for Home Assistant's embedded page and retained API-key sign-in as the third option.
+- Replaced outdated App Store installation instructions with a My Home Assistant repository link and current Apps terminology.
+- Added contribution guidance requiring personally reviewed, human-authored communication for any Open Home Foundation submission.
+
 ## 1.0.1
 
 - Minor documentation update.

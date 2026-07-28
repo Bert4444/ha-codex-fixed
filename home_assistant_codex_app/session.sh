@@ -13,25 +13,34 @@ if ! codex login status >/dev/null 2>&1; then
   printf '%s\n' \
     'HA Codex sign in' \
     '' \
-    '1. Sign in with Device Code (Preferred Method)' \
+    '1. Sign in with ChatGPT in a browser' \
+    '   Codex will provide a sign-in URL that you can open in any browser.' \
+    '' \
+    '2. Sign in with Device Code (Preferred Method)' \
     '   Sign in from another device with a secure, one-time code.' \
     '' \
-    '2. Provide your own API key' \
+    '3. Provide your own API key' \
     '   Pay for usage through an OpenAI Platform account.' \
     ''
 
   while true; do
-    printf 'Select 1 or 2: '
+    printf 'Select 1, 2, or 3: '
     IFS= read -r choice || exit 1
 
     case "${choice}" in
       1)
+        if codex login; then
+          break
+        fi
+        printf '\nBrowser sign-in did not complete. Please try again or use Device Code.\n\n'
+        ;;
+      2)
         if codex login --device-auth; then
           break
         fi
         printf '\nDevice-code sign-in did not complete. Please try again.\n\n'
         ;;
-      2)
+      3)
         printf 'Paste your OpenAI API key (input is hidden): '
         IFS= read -r -s api_key || exit 1
         printf '\n'
@@ -47,7 +56,7 @@ if ! codex login status >/dev/null 2>&1; then
         fi
         ;;
       *)
-        printf 'Please enter 1 or 2.\n\n'
+        printf 'Please enter 1, 2, or 3.\n\n'
         ;;
     esac
   done
