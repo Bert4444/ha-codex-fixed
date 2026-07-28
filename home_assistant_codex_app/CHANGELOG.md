@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.1.3
+
+- Corrected the history rail to use ttyd's actual xterm viewport; ttyd 1.7.7 does not expose a `window.term` object.
+- Made history-rail initialization retry until ttyd has created its terminal, restoring the visible rail and mouse-wheel history navigation.
+
 ## 1.1.2
 
 - Added an always-visible terminal-history rail that reads xterm's full buffer directly, including on Home Assistant's embedded browsers that hide native overlay scrollbars.
