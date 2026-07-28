@@ -2,6 +2,11 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.1.4
+
+- Restored tmux mouse/copy-mode scrolling for persistent sessions, so mouse-wheel and trackpad gestures navigate terminal history instead of cycling through previously typed commands.
+- Disabled tmux pane alternate-screen mode while preserving the persistent session and all three sign-in options.
+
 ## 1.1.3
 
 - Corrected the history rail to use ttyd's actual xterm viewport; ttyd 1.7.7 does not expose a `window.term` object.
