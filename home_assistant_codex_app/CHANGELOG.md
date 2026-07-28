@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.1.7
+
+- Added a CSS-rendered, always-visible history indicator for embedded browsers that defer the terminal page's injected rail script.
+
 ## 1.1.6
 
 - Added an always-visible history rail for persistent tmux sessions, including arrow controls and a draggable track that use the same working wheel-navigation path.
