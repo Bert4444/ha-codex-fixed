@@ -29,7 +29,11 @@ if [ "${PRESERVE_HISTORY}" = "true" ]; then
   TERMINAL_MODE="inline"
 fi
 
-readonly AUTH_FLOW_VERSION="browser-device-v3"
+# Keep the durable terminal-session identity stable. Changing it creates a new
+# tmux session, which discards the visible browser scrollback users rely on.
+# The sign-in menu is evaluated only when Codex is logged out, so it does not
+# need a new persistent session name to take effect.
+readonly AUTH_FLOW_VERSION="device-code-v2"
 readonly SESSION_NAME="home-assistant-codex-${MODEL}-${TERMINAL_MODE}-${AUTH_FLOW_VERSION}"
 TTYD_INDEX_ARGS=()
 

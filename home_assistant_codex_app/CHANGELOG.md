@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.1.1
+
+- Restored the stable persistent terminal-session identity so existing terminal scrollback and its visible scrollbar remain available after updating.
+
 ## 1.1.0
 
 - Restored browser-based ChatGPT sign-in: Codex provides a terminal URL when a browser cannot open automatically.
