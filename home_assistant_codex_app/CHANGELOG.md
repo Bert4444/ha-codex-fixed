@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.1.5
+
+- Loads tmux's mouse and alternate-screen settings before its server starts, preserving the browser's xterm scrollback and visible scrollbar for persistent sessions.
+
 ## 1.1.4
 
 - Restored tmux mouse/copy-mode scrolling for persistent sessions, so mouse-wheel and trackpad gestures navigate terminal history instead of cycling through previously typed commands.

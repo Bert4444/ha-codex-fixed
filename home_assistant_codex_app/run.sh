@@ -42,7 +42,7 @@ if [ "${PERSIST}" = "true" ]; then
   # during sidebar navigation. Its mouse mode must stay enabled so wheel and
   # trackpad gestures enter copy mode and navigate tmux's full history buffer
   # instead of being sent to Codex as up/down command-history keys.
-  COMMAND="tmux set-option -g history-limit ${SCROLLBACK}; tmux set-option -g mouse on; tmux set-option -g alternate-screen off; tmux set-option -g terminal-overrides 'xterm*:smcup@:rmcup@'; tmux new-session -A -s ${SESSION_NAME} '/usr/local/bin/ha-codex-session ${MODEL} ${TERMINAL_MODE}; exec bash -l'"
+  COMMAND="tmux -f /etc/ha-codex-tmux.conf set-option -g history-limit ${SCROLLBACK}; tmux -f /etc/ha-codex-tmux.conf new-session -A -s ${SESSION_NAME} '/usr/local/bin/ha-codex-session ${MODEL} ${TERMINAL_MODE}; exec bash -l'"
 else
   COMMAND="exec /usr/local/bin/ha-codex-session ${MODEL} ${TERMINAL_MODE}"
 fi
