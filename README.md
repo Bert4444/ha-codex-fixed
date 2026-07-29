@@ -62,20 +62,12 @@ https://github.com/ambient-home-systems/ha-codex
 
 ## First-time sign-in
 
-On its first launch, HA Codex shows a three-option sign-in menu. Use a ChatGPT
-account that has access to Codex for browser or device-code sign-in; ChatGPT
-subscription access and OpenAI API billing are separate. After updating from an
-earlier version, restart HA Codex to begin this revised sign-in flow in a fresh
-session.
+On its first launch, HA Codex shows a two-option sign-in menu. Use a ChatGPT
+account that has access to Codex for Device Code sign-in; ChatGPT subscription
+access and OpenAI API billing are separate. After updating from an earlier
+version, restart HA Codex to begin this revised sign-in flow in a fresh session.
 
-### 1. Sign in with ChatGPT in a browser
-
-Choose **Sign in with ChatGPT in a browser** to start Codex's normal browser
-sign-in flow. If Home Assistant cannot open a browser automatically, Codex
-shows a secure sign-in URL in the terminal. Copy or enter that URL in any
-browser, sign in to ChatGPT, then return to HA Codex.
-
-### 2. Log in with a different device (Preferred Method)
+### 1. Log in with a different device (Preferred Method)
 
 > [!IMPORTANT]
 > **Recommended for most Home Assistant installations**
@@ -85,19 +77,19 @@ browser, sign in to ChatGPT, then return to HA Codex.
 > sign in to your ChatGPT account, enter the code if asked, then return to HA
 > Codex.
 >
-> This is the preferred option because it avoids browser and pop-up limitations
-> in Home Assistant’s embedded add-on page. The code is temporary—never share
-> it.
+> This is the supported ChatGPT sign-in method for Home Assistant add-ons. A
+> browser callback cannot reliably return from your device to Codex inside its
+> isolated add-on container. The code is temporary—never share it.
 
 > [!NOTE]
 > Device codes are deliberately not shown in public screenshots. Treat the
 > temporary URL and code as sign-in credentials and keep them private.
 
-### 3. OpenAI API key (only if your Codex sign-in screen offers it)
+### 2. OpenAI API key (only if your Codex sign-in screen offers it)
 
 An API key is a separate, usage-billed OpenAI Platform account. It does **not**
-use your ChatGPT subscription allowance. Prefer the ChatGPT sign-in options
-above unless you specifically want API-billed usage. Never paste an API key in
+use your ChatGPT subscription allowance. Prefer Device Code sign-in unless you
+specifically want API-billed usage. Never paste an API key in
 an issue, screenshot, chat, or repository file.
 
 ## Model choice

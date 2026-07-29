@@ -2,6 +2,12 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.2.1
+
+- Removed browser-callback sign-in, which cannot reliably return to an isolated Home Assistant add-on container from a user's browser at `localhost`.
+- Made Device Code the first, preferred sign-in option and renumbered API-key sign-in as option 2.
+- Preserved the working persistent-session terminal history rail, including its mouse-wheel, click, drag, and arrow controls.
+
 ## 1.2.0
 
 - Rebuilt the terminal history rail injection to avoid `sed` replacement corruption that prevented prior rails from working and caused layout artifacts.
