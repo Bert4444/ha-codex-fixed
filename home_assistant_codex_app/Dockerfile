@@ -24,6 +24,8 @@ RUN apk add --no-cache \
       grep \
       gzip \
       jq \
+      python3 \
+      py3-yaml \
       ripgrep \
       tar \
       tmux \
@@ -47,6 +49,8 @@ RUN apk add --no-cache \
   && install -m 0755 "$(find /tmp/codex-host -type f -name 'codex-code-mode-host*' ! -name '*.sigstore' | head -n 1)" /usr/local/bin/codex-code-mode-host \
   && rm -rf /tmp/codex-host /tmp/codex-host.tar.gz \
   && codex --version \
+  && python3 --version \
+  && python3 -c "import yaml; print('PyYAML OK:', yaml.__version__)" \
   && test -x /usr/local/bin/codex-code-mode-host
 
 COPY run.sh /run.sh
