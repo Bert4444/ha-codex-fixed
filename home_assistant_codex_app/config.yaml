@@ -7,7 +7,7 @@ description: >
   control actions" and separately "Allow Home Assistant Core restart", then
   restart this add-on.
 
-version: "1.2.7.2"
+version: "1.2.7.3"
 slug: home_assistant_codex_fixed
 url: https://github.com/Bert4444/ha-codex-fixed
 
