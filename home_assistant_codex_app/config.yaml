@@ -1,19 +1,32 @@
-name: HA Codex
-description: Before starting, select the Codex model in App Configuration. Patch compatibility mode is enabled by default so Codex can use normal patches on Home Assistant OS. To let Codex validate, reload, or restart Home Assistant, enable "Allow Home Assistant control actions" (and separately "Allow Home Assistant Core restart"), then restart this add-on.
-version: "1.2.7"
-slug: home_assistant_codex_app
-url: https://github.com/ambient-home-systems/ha-codex
+name: HA Codex Fixed
+description: >
+  HA Codex with codex-code-mode-host included. Before starting, select the
+  Codex model in App Configuration. Patch compatibility mode is enabled by
+  default so Codex can use normal patches on Home Assistant OS. To let Codex
+  validate, reload, or restart Home Assistant, enable "Allow Home Assistant
+  control actions" and separately "Allow Home Assistant Core restart", then
+  restart this add-on.
+
+version: "1.2.7.1"
+slug: home_assistant_codex_fixed
+url: https://github.com/Bert4444/ha-codex-fixed
+
 arch:
   - amd64
+
 startup: application
 boot: auto
 init: false
+
 ingress: true
 ingress_port: 7681
 ingress_stream: true
+
 homeassistant_api: true
+
 panel_icon: mdi:robot-outline
-panel_title: HA Codex
+panel_title: HA Codex Fixed
+
 map:
   - type: homeassistant_config
     read_only: false
@@ -21,6 +34,7 @@ map:
   - type: addon_config
     read_only: false
     path: /config
+
 options:
   model: gpt-5.6-terra
   terminal_font_size: 14
@@ -32,6 +46,7 @@ options:
   file_transfer: false
   home_assistant_control: false
   allow_home_assistant_restart: false
+
 schema:
   model: list(gpt-5.6-terra|gpt-5.6-sol|gpt-5.6-luna|gpt-5.6|gpt-5.5|gpt-5.4|gpt-5.4-mini|gpt-5.3-codex-spark)
   terminal_font_size: int(10,24)
