@@ -39,15 +39,27 @@ RUN apk add --no-cache \
   && curl -fsSL "https://github.com/openai/codex/releases/download/rust-v${CODEX_VERSION}/codex-x86_64-unknown-linux-musl.tar.gz" -o /tmp/codex.tar.gz \
   && mkdir -p /tmp/codex \
   && tar -xzf /tmp/codex.tar.gz -C /tmp/codex \
-  && install -m 0755 "$(find /tmp/codex -type f -name 'codex*' ! -name '*.sigstore' | head -n 1)" /usr/local/bin/codex \
+  && install -m 0755 "$(find /tmp/codex -type f -name 'codex*' ! -name '*code-mode-host*' ! -name '*.sigstore' | head -n 1)" /usr/local/bin/codex \
   && rm -rf /tmp/codex /tmp/codex.tar.gz \
-  && codex --version
+  && curl -fsSL "https://github.com/openai/codex/releases/download/rust-v${CODEX_VERSION}/codex-code-mode-host-x86_64-unknown-linux-musl.tar.gz" -o /tmp/codex-host.tar.gz \
+  && mkdir -p /tmp/codex-host \
+  && tar -xzf /tmp/codex-host.tar.gz -C /tmp/codex-host \
+  && install -m 0755 "$(find /tmp/codex-host -type f -name 'codex-code-mode-host*' ! -name '*.sigstore' | head -n 1)" /usr/local/bin/codex-code-mode-host \
+  && rm -rf /tmp/codex-host /tmp/codex-host.tar.gz \
+  && codex --version \
+  && test -x /usr/local/bin/codex-code-mode-host
 
 COPY run.sh /run.sh
 COPY session.sh /usr/local/bin/ha-codex-session
 COPY ha-codex-ha /usr/local/bin/ha-codex-ha
 COPY tmux.conf /etc/ha-codex-tmux.conf
-RUN chmod 0755 /run.sh /usr/local/bin/ha-codex-session /usr/local/bin/ha-codex-ha \
+
+RUN chmod 0755 \
+      /run.sh \
+      /usr/local/bin/ha-codex-session \
+      /usr/local/bin/ha-codex-ha \
+      /usr/local/bin/codex \
+      /usr/local/bin/codex-code-mode-host \
   && mkdir -p /homeassistant /config/codex
 
 WORKDIR /homeassistant
@@ -55,4 +67,4 @@ WORKDIR /homeassistant
 HEALTHCHECK --interval=30s --timeout=10s --start-period=20s --retries=3 \
   CMD curl --fail --silent http://127.0.0.1:7681/ >/dev/null || exit 1
 
-CMD [ "/run.sh" ]
+CMD ["/run.sh"]
