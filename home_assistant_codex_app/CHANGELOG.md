@@ -2,6 +2,10 @@
 
 All notable changes to HA Codex are documented here.
 
+## 1.2.7
+
+- Added a latest-release version badge to the READMEs and linked the changelog from both. Documentation only; no functional changes.
+
 ## 1.2.6
 
 - Updated the add-on base image from Alpine 3.22 to 3.23.
